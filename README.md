@@ -1,3 +1,1 @@
-Here you get
-    All 
-Dockerfiles.!!!
+Here you get all the Dockerfiles.!!!
