@@ -1,0 +1,12 @@
+FROM node
+
+WORKDIR /usr/src/app
+
+COPY package* .
+COPY . .
+
+RUN npm install
+
+EXPOSE 80
+
+CMD ["node","index.js"]
