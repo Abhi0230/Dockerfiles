@@ -1,0 +1,10 @@
+FROM mysql
+MAINTAINER abhay_vishwakarma
+
+ENV MYSQL_ROOT_PASSWORD Pass@123
+
+EXPOSE 3306
+COPY myshell.sh /usr/local/bin/myshell.sh
+RUN chmod +x /usr/local/bin/myshell.sh
+CMD ["mysql" ,"&&" ,"/usr/local/bin/myshell.sh"]
+

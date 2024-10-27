@@ -1,0 +1,11 @@
+FROM mysql
+MAINTAINER abhay_vishwakarma
+
+ENV MYSQL_ROOT_PASSWORD Pass@123
+ENV MYSQL_DATABASE wordpressdb
+
+EXPOSE 3306
+COPY myshell.sh /docker-entrypoint-initdb.d/myshell.sh
+RUN chmod +x /docker-entrypoint-initdb.d/myshell.sh
+CMD ["mysqld"]
+
